@@ -1,0 +1,61 @@
+/* 기본 레이아웃 및 컨테이너 */
+.app-container {
+  min-height: 100vh;
+  background-color: #f9fafb; /* bg-background */
+  font-family: sans-serif; /* font-sans */
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  max-width: 1280px; /* container */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+  padding-top: 2rem; /* py-8 */
+  padding-bottom: 2rem; /* py-8 */
+  flex-grow: 1;
+}
+
+/* 메인 헤더 섹션 */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem; /* mb-8 */
+}
+
+.main-title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700; /* font-bold */
+  color: #111827; /* text-text-primary */
+}
+
+/* 새로 만들기 버튼 */
+.add-website-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* gap-2 */
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  background-color: #6366f1; /* bg-primary */
+  color: white; /* text-white */
+  font-weight: 600; /* font-semibold */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
+  transition-property: all;
+  transition-duration: 200ms;
+  border: none;
+  cursor: pointer;
+}
+
+.add-website-button:hover {
+  background-color: #4f46e5; /* hover:bg-indigo-500 */
+}
+
+.add-website-button:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-color: rgba(99, 102, 241, 0.75); /* focus:ring-indigo-400, focus:ring-opacity-75 */
+  box-shadow: 0 0 0 2px var(--tw-ring-color);
+}
