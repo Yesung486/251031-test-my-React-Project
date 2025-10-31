@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나만의 웹사이트 빌더</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#4f46e5',
+              'secondary': '#10b981',
+              'background': '#111827',
+              'surface': '#1f2937',
+              'text-primary': '#f9fafb',
+              'text-secondary': '#9ca3af',
+            }
+          }
+        }
+      }
+    </script>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-Dro9KszT.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BfcIZxkp.css">
+</head>
+  <body class="bg-background text-text-primary">
+    <div id="root"></div>
+  </body>
+</html>
