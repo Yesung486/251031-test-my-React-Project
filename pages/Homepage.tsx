@@ -1,8 +1,7 @@
 // 파일 위치: pages/Homepage.tsx
 
-// 1. 부품(컴포넌트)들의 주소를 정확하게 수정했어! '../' -> '../'
 import React, { useState, useCallback } from 'react';
-import { Website } from '../types'; // types.ts는 밖에 있으니 ../types가 맞아!
+import { Website } from '../types';
 import Header from '../components/Header';
 import WebsiteList from '../components/WebsiteList';
 import AddWebsiteModal from '../components/AddWebsiteModal';
@@ -12,7 +11,7 @@ import Footer from '../components/Footer';
 
 // 'App'이었던 이름을 'Homepage'로 바꿔줬어.
 const Homepage: React.FC = () => {
-  // --- 이 안의 모든 내용은 네 코드 그대로야! 하나도 안 건드렸어. ---
+  // --- 이 안의 모든 내용은 네 코드 그대로야! ---
   const [websites, setWebsites] = useState<Website[]>([
     {
       id: '1',
@@ -22,7 +21,22 @@ const Homepage: React.FC = () => {
       category: '음악',
       url: 'https://example.com/blog',
     },
-    // ... (나머지 카드 데이터는 그대로) ...
+    {
+      id: '2',
+      name: '이커머스 스토어',
+      description: '수제 공예품과 독특한 아이템을 판매합니다.',
+      thumbnailUrl: 'https://picsum.photos/seed/store/500/300',
+      category: '게임',
+      url: 'https://example.com/store',
+    },
+     {
+      id: '3',
+      name: '사진 포트폴리오',
+      description: '전 세계에서 찍은 최고의 작품들을 선보입니다.',
+      thumbnailUrl: 'https://picsum.photos/seed/portfolio/500/300',
+      category: '음악',
+      url: 'https://example.com/portfolio',
+    },
     {
       id: '4',
       name: '게임 리뷰 사이트',
@@ -30,7 +44,17 @@ const Homepage: React.FC = () => {
       thumbnailUrl: 'https://picsum.photos/seed/review/500/300',
       category: '게임',
       url: 'https://example.com/reviews',
-    }
+    },
+    // ↓↓↓ 바로 이 부분을 새로 추가했어! ↓↓↓
+    {
+      id: '5',
+      name: '네온 브레이커 게임',
+      description: '집중력 향상을 위한 벽돌깨기 게임 페이지로 이동합니다.',
+      thumbnailUrl: 'https://picsum.photos/seed/neonbreaker/500/300',
+      category: '게임',
+      url: '#', // 내부 페이지로 이동할 거라 외부 주소는 필요 없어!
+      path: '/neonbreaker', // <-- 이게 바로 그 '특별한 이정표'야!
+    },
   ]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);

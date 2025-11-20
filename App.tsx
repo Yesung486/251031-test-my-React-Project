@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Homepage from './pages/Homepage'; // 우리가 이사시킨 Homepage를 불러올게.
-import SpaceShooter from './pages/SpaceShooter'; // 게임 페이지도 불러오고.
-import './App.css'; // 원래 있던 CSS 파일은 그대로 쓸게.
+import Homepage from './pages/Homepage';
+import SpaceShooter from './pages/SpaceShooter'; // 게임 페이지를 불러올게.
+import './App.css';
 
 function App() {
   return (
@@ -13,8 +13,8 @@ function App() {
         {/* 주소가 그냥 `/` 일 때는 Homepage를 보여줘! */}
         <Route path="/" element={<Homepage />} />
 
-        {/* 주소가 `/spaceshooter` 일 때는 SpaceShooter 페이지를 보여줘! */}
-        <Route path="/spaceshooter" element={<SpaceShooter />} />
+        {/* 주소가 `/neonbreaker` 일 때는 SpaceShooter 페이지(게임 페이지)를 보여줘! */}
+        <Route path="/neonbreaker" element={<SpaceShooter />} />
       </Routes>
     </BrowserRouter>
   );

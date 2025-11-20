@@ -13,7 +13,7 @@ interface WebsiteCardProps {
 }
 
 const WebsiteCard: React.FC<WebsiteCardProps> = ({ website, onDelete, onEdit }) => {
-  // 2. 카드 내용은 똑같아.
+  // 2. 카드 내용은 똑같아. 반복되는 부분을 하나로 묶었어.
   const cardInnerContent = (
     <>
       <img
