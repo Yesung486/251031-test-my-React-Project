@@ -1,17 +1,15 @@
 // 파일 위치: pages/Homepage.tsx
 
-import React, { useState, useCallback } from 'react';
-import { Website } from '../types';
-import Header from '../components/Header';
+import React, { useState, useCallback, useMemo } from 'react';
+import { Website, WebsiteCategory } from '../types';
+// 1. Header와 Footer는 Layout이 담당하니까 여기서 import를 지웠어!
 import WebsiteList from '../components/WebsiteList';
 import AddWebsiteModal from '../components/AddWebsiteModal';
 import EditWebsiteModal from '../components/EditWebsiteModal';
 import { PlusIcon } from '../components/icons/PlusIcon';
-import Footer from '../components/Footer';
 
-// 'App'이었던 이름을 'Homepage'로 바꿔줬어.
+// 'App'이었던 이름을 'Homepage'로 바꿨어.
 const Homepage: React.FC = () => {
-  // --- 이 안의 모든 내용은 네 코드 그대로야! ---
   const [websites, setWebsites] = useState<Website[]>([
     {
       id: '1',
@@ -45,21 +43,20 @@ const Homepage: React.FC = () => {
       category: '게임',
       url: 'https://example.com/reviews',
     },
-    // ↓↓↓ 바로 이 부분을 새로 추가했어! ↓↓↓
     {
       id: '5',
       name: '네온 브레이커 게임',
       description: '집중력 향상을 위한 벽돌깨기 게임 페이지로 이동합니다.',
       thumbnailUrl: 'https://picsum.photos/seed/neonbreaker/500/300',
       category: '게임',
-      url: '#', // 내부 페이지로 이동할 거라 외부 주소는 필요 없어!
-      path: '/neonbreaker', // <-- 이게 바로 그 '특별한 이정표'야!
+      url: '#',
+      path: '/neonbreaker',
     },
   ]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [editingWebsite, setEditingWebsite] = useState<Website | null>(null);
-  const [activeCategory, setActiveCategory] = useState('전체');
+  const [activeCategory, setActiveCategory] = useState<WebsiteCategory | '전체'>('전체');
 
   const handleOpenModal = useCallback(() => {
     setIsModalOpen(true);
@@ -101,35 +98,32 @@ const Homepage: React.FC = () => {
   const handleDeleteWebsite = useCallback((id: string) => {
     setWebsites(prevWebsites => prevWebsites.filter(website => website.id !== id));
   }, []);
+  
+  // 2. 카테고리 필터링 로직은 Homepage가 직접 갖도록 다시 가져왔어.
+  //    Layout은 그냥 보여주기만 하고, 실제 필터링은 여기서 하는 게 맞아!
+  const filteredWebsites = useMemo(() => {
+    if (activeCategory === '전체') return websites;
+    return websites.filter(website => website.category === activeCategory);
+  }, [websites, activeCategory]);
 
-  const handleCategoryChange = (category: string) => {
-    setActiveCategory(category);
-  };
-
-  const filteredWebsites = websites.filter(
-    website => activeCategory === '전체' || website.category === activeCategory
-  );
-
+  // 3. return 부분을 아주 깔끔하게 정리했어! Header와 Footer를 철거했지.
   return (
-    <div className="app-container">
-      <Header activeCategory={activeCategory} onCategoryChange={handleCategoryChange} />
-      <main className="main-content">
-        <div className="main-header">
-          <h2 className="main-title">내 웹사이트</h2>
-          <button
-            onClick={handleOpenModal}
-            className="add-website-button"
-          >
-            <PlusIcon />
-            새로 만들기
-          </button>
-        </div>
-        <WebsiteList
-          websites={filteredWebsites}
-          onDelete={handleDeleteWebsite}
-          onEdit={handleOpenEditModal}
-        />
-      </main>
+    <main className="main-content">
+      <div className="main-header">
+        <h2 className="main-title">내 웹사이트</h2>
+        <button
+          onClick={handleOpenModal}
+          className="add-website-button"
+        >
+          <PlusIcon />
+          새로 만들기
+        </button>
+      </div>
+      <WebsiteList
+        websites={filteredWebsites}
+        onDelete={handleDeleteWebsite}
+        onEdit={handleOpenEditModal}
+      />
       <AddWebsiteModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
@@ -141,10 +135,8 @@ const Homepage: React.FC = () => {
         onUpdate={handleUpdateWebsite}
         website={editingWebsite}
       />
-      <Footer />
-    </div>
+    </main>
   );
 };
 
-// 마지막 이름도 Homepage로 바꿔서 내보내기!
 export default Homepage;
