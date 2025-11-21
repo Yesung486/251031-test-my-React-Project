@@ -52,6 +52,15 @@ const Homepage: React.FC = () => {
       url: '#',
       path: '/neonbreaker',
     },
+    {
+      id: '6',
+      name: 'AI 가상 피팅',
+      description: 'AI를 사용하여 옷을 가상으로 입어보는 페이지로 이동합니다.',
+      thumbnailUrl: 'https://picsum.photos/seed/tryon/500/300',
+      category: '기타', // 카테고리는 원하는 걸로 바꿔도 돼!
+      url: '#', // 내부 페이지로 이동할 거라 외부 주소는 필요 없어!
+      path: '/virtual-try-on', // <-- 이게 바로 그 '새로운 이정표'야!
+    },
   ]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
