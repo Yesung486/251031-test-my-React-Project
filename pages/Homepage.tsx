@@ -13,38 +13,6 @@ const Homepage: React.FC = () => {
   const [websites, setWebsites] = useState<Website[]>([
     {
       id: '1',
-      name: '내 개인 블로그',
-      description: '기술과 삶에 대한 제 생각을 공유하는 공간입니다.',
-      thumbnailUrl: 'https://picsum.photos/seed/blog/500/300',
-      category: '음악',
-      url: 'https://example.com/blog',
-    },
-    {
-      id: '2',
-      name: '이커머스 스토어',
-      description: '수제 공예품과 독특한 아이템을 판매합니다.',
-      thumbnailUrl: 'https://picsum.photos/seed/store/500/300',
-      category: '게임',
-      url: 'https://example.com/store',
-    },
-     {
-      id: '3',
-      name: '사진 포트폴리오',
-      description: '전 세계에서 찍은 최고의 작품들을 선보입니다.',
-      thumbnailUrl: 'https://picsum.photos/seed/portfolio/500/300',
-      category: '음악',
-      url: 'https://example.com/portfolio',
-    },
-    {
-      id: '4',
-      name: '게임 리뷰 사이트',
-      description: '최신 게임들에 대한 심층 리뷰.',
-      thumbnailUrl: 'https://picsum.photos/seed/review/500/300',
-      category: '게임',
-      url: 'https://example.com/reviews',
-    },
-    {
-      id: '5',
       name: '네온 브레이커 게임',
       description: '집중력 향상을 위한 벽돌깨기 게임 페이지로 이동합니다.',
       thumbnailUrl: 'https://picsum.photos/seed/neonbreaker/500/300',
@@ -53,7 +21,7 @@ const Homepage: React.FC = () => {
       path: '/neonbreaker',
     },
     {
-      id: '6',
+      id: '2',
       name: 'AI 가상 피팅',
       description: 'AI를 사용하여 옷을 가상으로 입어보는 페이지로 이동합니다.',
       thumbnailUrl: 'https://picsum.photos/seed/tryon/500/300',
