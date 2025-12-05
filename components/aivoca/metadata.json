@@ -1,0 +1,5 @@
+{
+  "name": "AIVOCA",
+  "description": "AI 기반 개인 맞춤형 단어 암기 코치. 학습자의 약점을 진단하고 최적화된 퀴즈를 제공합니다.",
+  "requestFramePermissions": []
+}

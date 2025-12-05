@@ -5,21 +5,21 @@ interface NavbarProps {
   onCategoryChange: (category: string) => void;
 }
 
-const categories = ['전체', '게임', '음악'];
+const categories = ['전체', '게임', '학습', '기타'];
 
 const Navbar: React.FC<NavbarProps> = ({ activeCategory, onCategoryChange }) => {
   return (
-    <nav className="bg-surface/80 backdrop-blur-sm border-b border-t border-gray-700">
-      <div className="container mx-auto px-4">
-        <ul className="flex items-center gap-6">
+    <div className="container mx-auto px-4 mt-4">
+      <div className="glass-panel rounded-2xl p-1">
+        <ul className="flex items-center justify-around">
           {categories.map(category => (
-            <li key={category}>
+            <li key={category} className="flex-1 text-center">
               <button
                 onClick={() => onCategoryChange(category)}
-                className={`py-3 text-sm font-medium transition-colors duration-200 border-b-2 ${
+                className={`w-full py-2.5 text-sm font-semibold rounded-[18px] transition-all duration-300 ${
                   activeCategory === category
-                    ? 'border-primary text-primary'
-                    : 'border-transparent text-text-secondary hover:text-text-primary'
+                    ? 'bg-primary text-white shadow-md'
+                    : 'text-text-secondary hover:text-text-primary'
                 }`}
               >
                 {category}
@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeCategory, onCategoryChange }) => 
           ))}
         </ul>
       </div>
-    </nav>
+    </div>
   );
 };
 

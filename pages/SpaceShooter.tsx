@@ -1,15 +1,13 @@
 // 파일 위치: pages/SpaceShooter.tsx
 
 import React from 'react';
-// 1. 우리가 방금 완성한 진짜 게임 부품을 여기서 불러올게!
+// '홈으로 돌아가기' 버튼이 필요 없으니 Link는 지웠어!
 import NeonBreakerGame from '../components/game-neon-breaker/NeonBreakerGame';
 
 const SpaceShooter: React.FC = () => {
-  // 2. 이 페이지는 아주 간단해. 그냥 NeonBreakerGame을 화면에 보여주는 역할만 해.
+  // 이제 이 페이지는 아주 깔끔하게 게임만 보여주면 돼.
   return (
-    <div>
-      <NeonBreakerGame />
-    </div>
+    <NeonBreakerGame />
   );
 };
 

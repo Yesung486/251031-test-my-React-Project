@@ -5,24 +5,28 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './pages/Layout';
 import Homepage from './pages/Homepage';
 import SpaceShooter from './pages/SpaceShooter';
-// 1. 우리가 방금 만든 '가상 피팅 페이지'를 여기서 불러올게!
 import VirtualTryOnPage from './pages/VirtualTryOnPage';
+import AivocaPage from './pages/AivocaPage';
+import { ThemeProvider } from './contexts/ThemeContext'; // 1. 우리가 만든 '상태 관리자'를 불러오자!
 import './App.css';
 
 function App() {
   const basename = "/251031-test-my-React-Project/";
 
   return (
-    <BrowserRouter basename={basename}>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Homepage />} />
-          <Route path="neonbreaker" element={<SpaceShooter />} />
-          {/* ↓↓↓ 바로 이 한 줄이 '가상 피팅 페이지'로 가는 새로운 길이야! ↓↓↓ */}
-          <Route path="virtual-try-on" element={<VirtualTryOnPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    // 2. ThemeProvider로 BrowserRouter 전체를 감싸주면 끝!
+    <ThemeProvider>
+      <BrowserRouter basename={basename}>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Homepage />} />
+            <Route path="neonbreaker" element={<SpaceShooter />} />
+            <Route path="virtual-try-on" element={<VirtualTryOnPage />} />
+            <Route path="aivoca" element={<AivocaPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
