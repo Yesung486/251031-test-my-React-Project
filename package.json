@@ -28,13 +28,17 @@
 
     "@google/genai": "^1.30.0",
 
+    "@types/matter-js": "^0.20.2",
+
     "lucide-react": "^0.554.0",
+
+    "matter-js": "^0.20.0",
 
     "react": "^19.2.0",
 
     "react-dom": "^19.2.0",
 
-    "react-router-dom": "^7.9.6",
+    "react-router-dom": "^7.10.1",
 
     "recharts": "^3.5.0"
 
@@ -46,7 +50,7 @@
 
     "@types/node": "^22.14.0",
 
-    "@vitejs/plugin-react": "^5.0.0",
+    "@vitejs/plugin-react": "^5.1.2",
 
     "autoprefixer": "^10.4.22",
 

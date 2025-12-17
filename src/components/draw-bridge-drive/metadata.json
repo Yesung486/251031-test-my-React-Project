@@ -1,0 +1,5 @@
+{
+  "name": "Draw Bridge & Drive",
+  "description": "A physics-based puzzle game where you draw bridges to help a car cross cliffs. Features multiple difficulties and touch support.",
+  "requestFramePermissions": []
+}
