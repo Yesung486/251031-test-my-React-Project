@@ -14,6 +14,7 @@ import SliceGame from './components/slice-game/SliceGame';
 import NeonStackPage from './pages/NeonStackPage';
 import GenerativeArtPage from './pages/GenerativeArtPage';
 import TypoStudioPage from './pages/TypoStudioPage';
+import LPCoverMakerPage from './pages/LPCoverMakerPage';
 import { ThemeProvider } from '../contexts/ThemeContext';
 import './App.css';
 import { Slice } from 'lucide-react';
@@ -36,7 +37,8 @@ function App() {
             <Route path="slice-game" element={<SliceGame />} />
             <Route path="neon-stack" element={<NeonStackPage />} />
             <Route path="generative-art" element={<GenerativeArtPage />} />
-            <Route path="/kinetic-typo" element={<TypoStudioPage />} />
+            <Route path="kinetic-typo" element={<TypoStudioPage />} />
+            <Route path="LP-cover-maker" element={<LPCoverMakerPage />} />
 
           </Route>
         </Routes>

@@ -30,6 +30,8 @@
 
     "@types/matter-js": "^0.20.2",
 
+    "html2canvas": "^1.4.1",
+
     "lucide-react": "^0.554.0",
 
     "matter-js": "^0.20.0",
@@ -47,6 +49,8 @@
   "devDependencies": {
 
     "@tailwindcss/postcss": "^4.1.17",
+
+    "@types/html2canvas": "^0.5.35",
 
     "@types/node": "^22.14.0",
 

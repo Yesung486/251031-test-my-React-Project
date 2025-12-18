@@ -1,0 +1,7 @@
+{
+  "name": "Vinyl Studio: Hip LP Cover Maker",
+  "description": "A high-quality LP and album cover design studio featuring realistic CSS-based vinyl rendering, grain filters, and custom stickers with an intuitive cognitive-psychology-based UI.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

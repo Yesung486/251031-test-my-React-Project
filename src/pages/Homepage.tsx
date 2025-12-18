@@ -38,6 +38,15 @@ const Homepage: React.FC = () => {
     url: '#',
     path: '/kinetic-typo', // 👈 아까 App.tsx에서 만든 주소랑 똑같아야 합니다!
   },
+  { 
+    id: '11', 
+    name: 'LP 커버 메이커', 
+    description: '나만의 감성적인 LP판 커버를 디자인하고 만들어보세요.', 
+    thumbnailUrl: 'https://picsum.photos/seed/lpvinyl/500/300', 
+    category: '예술', 
+    url: '#', 
+    path: '/LP-cover-maker', // ★ 중요: App.tsx에 이 주소를 등록해야 해!
+  },
   ]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
