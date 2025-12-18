@@ -11,6 +11,9 @@ import SurvivorGamePage from './pages/SurvivorGamePage';
 import DrawBridgeGame from './pages/DrawBridgeGamePage';
 import SubwayRunnerGamePage from './pages/SubwayRunnerGamePage';
 import SliceGame from './components/slice-game/SliceGame';
+import NeonStackPage from './pages/NeonStackPage';
+import GenerativeArtPage from './pages/GenerativeArtPage';
+import TypoStudioPage from './pages/TypoStudioPage';
 import { ThemeProvider } from '../contexts/ThemeContext';
 import './App.css';
 import { Slice } from 'lucide-react';
@@ -31,6 +34,10 @@ function App() {
             <Route path="drawbridgegame" element={<DrawBridgeGame />} />
             <Route path="subway-runner" element={<SubwayRunnerGamePage />} />
             <Route path="slice-game" element={<SliceGame />} />
+            <Route path="neon-stack" element={<NeonStackPage />} />
+            <Route path="generative-art" element={<GenerativeArtPage />} />
+            <Route path="/kinetic-typo" element={<TypoStudioPage />} />
+
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,0 +1,5 @@
+{
+  "name": "Ethereal Flow - Generative Art",
+  "description": "Perlin Noise 기반의 벡터장(Flow Field)을 활용한 감각적인 제너러티브 아트 웹 어플리케이션입니다.",
+  "requestFramePermissions": []
+}

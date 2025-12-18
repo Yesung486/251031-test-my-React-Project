@@ -1,0 +1,5 @@
+{
+  "name": "네온 스택: 인피니트 빌더 (Neon Stack)",
+  "description": "인지 심리학적 원리가 적용된 3D 아이소메트릭 타워 쌓기 게임입니다. 부드러운 HSL 그라데이션과 몰입감 넘치는 Web Audio API 효과음을 경험하세요.",
+  "requestFramePermissions": []
+}

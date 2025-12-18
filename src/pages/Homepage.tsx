@@ -17,7 +17,29 @@ const Homepage: React.FC = () => {
     { id: '5', name: '다리 만드는 게임', description: '다리 만드는 게임을 즐길 수 있는 페이지입니다.', thumbnailUrl: 'https://picsum.photos/seed/drawbridge/500/300', category: '게임', url: '#', path: '/drawbridgegame', },
     { id: '6', name: '지하철 러너 게임', description: '지하철 러너 게임을 즐길 수 있는 페이지입니다.', thumbnailUrl: 'https://picsum.photos/seed/subwayrunner/500/300', category: '게임', url: '#', path: '/subway-runner', },
     { id: '7', name: '슬라이스 게임', description: '과일을 슬라이스하는 재미있는 게임 페이지로 이동합니다.', thumbnailUrl: 'https://picsum.photos/seed/slicegame/500/300', category: '게임', url: '#', path: '/slice-game', },
+    { id: '8', name: '네온 스택 게임', description: '네온 블록을 쌓아 올리는 스택 게임 페이지로 이동합니다.', thumbnailUrl: 'https://picsum.photos/seed/neonstack/500/300', category: '게임', url: '#', path: '/neon-stack', },
+    
+    // 👇 [여기에 추가했어!]
+    { 
+      id: '9', 
+      name: '제너레이티브 아트', 
+      description: '코드로 그려지는 아름다운 예술 작품을 감상해보세요.', 
+      thumbnailUrl: 'https://picsum.photos/seed/genart/500/300', 
+      category: '예술', 
+      url: '#', 
+      path: '/generative-art', // ★ App.tsx에 등록한 주소랑 똑같아야 해!
+    },
+    {
+    id: '10',
+    name: '키네틱 타이포 스튜디오',
+    description: '텍스트가 입자로 변해 마우스에 반응하는 인터랙티브 아트입니다. 직접 디자인해보세요!',
+    thumbnailUrl: 'https://picsum.photos/seed/kinetic/500/300', // 썸네일은 나중에 예쁜걸로 바꾸세요
+    category: '예술', 
+    url: '#',
+    path: '/kinetic-typo', // 👈 아까 App.tsx에서 만든 주소랑 똑같아야 합니다!
+  },
   ]);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [editingWebsite, setEditingWebsite] = useState<Website | null>(null);
@@ -40,7 +62,6 @@ const Homepage: React.FC = () => {
   return (
     <>
       <Navbar activeCategory={activeCategory as string} onCategoryChange={handleCategoryChange} />
-      {/* ↓↓↓ 바로 이 부분! '1, 2, 3열' 버튼을 깨끗하게 지웠어! ↓↓↓ */}
       <div className="main-header mt-8 px-4 flex justify-between items-center">
         <h2 className="main-title">내 웹사이트</h2>
         <button
