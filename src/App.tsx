@@ -9,8 +9,11 @@ import VirtualTryOnPage from './pages/VirtualTryOnPage';
 import AivocaPage from './pages/AivocaPage';
 import SurvivorGamePage from './pages/SurvivorGamePage';
 import DrawBridgeGame from './pages/DrawBridgeGamePage';
+import SubwayRunnerGamePage from './pages/SubwayRunnerGamePage';
+import SliceGame from './components/slice-game/SliceGame';
 import { ThemeProvider } from '../contexts/ThemeContext';
 import './App.css';
+import { Slice } from 'lucide-react';
 
 function App() {
   const basename = "/251031-test-my-React-Project/";
@@ -26,6 +29,8 @@ function App() {
             <Route path="aivoca" element={<AivocaPage />} />
             <Route path="survivor-game" element={<SurvivorGamePage />} />
             <Route path="drawbridgegame" element={<DrawBridgeGame />} />
+            <Route path="subway-runner" element={<SubwayRunnerGamePage />} />
+            <Route path="slice-game" element={<SliceGame />} />
           </Route>
         </Routes>
       </BrowserRouter>

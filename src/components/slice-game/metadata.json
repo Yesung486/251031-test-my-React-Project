@@ -1,0 +1,7 @@
+{
+  "name": "Neon Blade: Geometry Slice",
+  "description": "A high-octane physics-based slicing game where you cut neon geometric fruits and avoid bombs.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

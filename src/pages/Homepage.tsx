@@ -15,6 +15,8 @@ const Homepage: React.FC = () => {
     { id: '3', name: 'AIVOCA 단어장', description: 'AI와 함께 나만의 영어 단어장을 만들고 학습하는 앱입니다.', thumbnailUrl: 'https://picsum.photos/seed/aivoca/500/300', category: '학습', url: '#', path: '/aivoca', },
     { id: '4', name: '서바이벌게임', description: '서바이벌 게임을 즐길 수 있는 페이지입니다.', thumbnailUrl: 'https://picsum.photos/seed/survivor/500/300', category: '게임', url: '#', path: '/survivor-game', },
     { id: '5', name: '다리 만드는 게임', description: '다리 만드는 게임을 즐길 수 있는 페이지입니다.', thumbnailUrl: 'https://picsum.photos/seed/drawbridge/500/300', category: '게임', url: '#', path: '/drawbridgegame', },
+    { id: '6', name: '지하철 러너 게임', description: '지하철 러너 게임을 즐길 수 있는 페이지입니다.', thumbnailUrl: 'https://picsum.photos/seed/subwayrunner/500/300', category: '게임', url: '#', path: '/subway-runner', },
+    { id: '7', name: '슬라이스 게임', description: '과일을 슬라이스하는 재미있는 게임 페이지로 이동합니다.', thumbnailUrl: 'https://picsum.photos/seed/slicegame/500/300', category: '게임', url: '#', path: '/slice-game', },
   ]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);

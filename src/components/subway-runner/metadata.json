@@ -1,0 +1,5 @@
+{
+  "name": "Subway Runner",
+  "description": "A 3D infinite runner game where you dodge trains and collect coins on subway tracks.",
+  "requestFramePermissions": []
+}

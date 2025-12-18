@@ -1,13 +1,19 @@
-// 파일 위치: pages/SurvivorGamePage.tsx
+// src/pages/SurvivorGamePage.tsx
 
 import React from 'react';
-// ↓↓↓ 바로 이 부분! 폴더 주소를 우리가 방금 바꾼 이름으로 고쳤어! ↓↓↓
-import SurvivorGameApp from '../components/survivor-game/SurvivorGameApp';
+// 👇 경로가 맞는지 확인해! (SurvivorGameApp을 불러와야 해)
+import SurvivorGameApp from '../components/survivor-game/SurvivorGameApp'; 
 
 const SurvivorGamePage: React.FC = () => {
   return (
-    <div>
-      <SurvivorGameApp />
+    // 👇 [핵심] 높이는 메뉴바(80px) 빼고, relative로 좌표 기준점 잡기!
+    <div className="w-full h-[calc(100vh-80px)] bg-gray-900 overflow-hidden relative">
+      
+      {/* 게임이 부모 크기를 100% 따라가도록 설정 */}
+      <div className="absolute top-0 left-0 w-full h-full">
+        <SurvivorGameApp />
+      </div>
+
     </div>
   );
 };
